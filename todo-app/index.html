@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 My Todo List</h1>
+      <p>Stay organized and productive</p>
+    </header>
+
+    <div class="todo-input-section">
+      <form id="todoForm">
+        <input
+          type="text"
+          id="todoInput"
+          placeholder="Add a new task..."
+          autocomplete="off"
+        />
+        <button type="submit" class="add-btn">Add Task</button>
+      </form>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <div class="stats">
+      <span>Total: <strong id="totalCount">0</strong></span>
+      <span>Completed: <strong id="completedCount">0</strong></span>
+    </div>
+
+    <ul id="todoList" class="todo-list"></ul>
+
+    <div class="empty-state" id="emptyState">
+      <p>No tasks yet. Add one to get started! ✨</p>
+    </div>
+
+    <footer>
+      <button id="clearCompleted" class="clear-btn">Clear Completed</button>
+      <button id="deleteAll" class="delete-btn">Delete All</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
